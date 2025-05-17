@@ -27,6 +27,7 @@ def signup(email, password, username, bday, gender, age, grade, school):
 def login(email, password):
     try:
         user = auth.sign_in_with_email_and_password(email, password)
+        st.session_state['user'] = user
         st.session_state['is_authenticated'] = True
         st.session_state['user_id'] = user['localId']
         st.session_state['user_token'] = user['idToken']
