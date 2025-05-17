@@ -2,3 +2,4 @@ streamlit
 pyrebase4
 firebase-admin
 openai
+streamlit_calendar
