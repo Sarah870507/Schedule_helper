@@ -36,6 +36,7 @@ def show(database):
    homework = st.text_area("Type homework (separated by comma)")
    upcoming_tests = st.text_input("Type tests (separated by comma)")
    projects = st.text_input("Type projects (separated by comma)")
+   date = st.date_input("Enter the date of the week you want to schedule", min_value=datetime.date.today())  
 
    if st.button("Submit"):
 
@@ -51,8 +52,8 @@ def show(database):
             "homework": homework,
             "upcoming_tests": upcoming_tests,
             "projects": projects,
-            "schedule": schedule
-         }
+            "schedule": schedule,
+            "date": date.isoformat()     }
       }
       user = st.session_state['user']
       database.collection("users").document(user['localId']).set(data)
