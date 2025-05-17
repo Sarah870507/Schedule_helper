@@ -23,8 +23,8 @@ Output rules (very important):
 3. Each event object must contain:
    {
      "title": "📚 English essay",      // short label, emoji optional
-     "start": "2025-05-07T14:00:00",   // ISO‑8601
-     "end":   "2025-05-07T16:00:00",   // ISO‑8601
+     "start": "2025-05-17T14:00:00",   // ISO‑8601
+     "end":   "2025-05-17T16:00:00",   // ISO‑8601
      "allDay": false,                  // optional, default false
      "category": "Homework"            // one of the five categories above
    }
