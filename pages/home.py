@@ -16,4 +16,4 @@ def show():
         auth.show_login_signup_form()
 
 
-show()
+show(database_instance)

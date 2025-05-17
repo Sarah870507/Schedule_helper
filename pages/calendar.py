@@ -1,6 +1,9 @@
 import streamlit as st
 from streamlit_calendar import calendar
 from datetime import date, datetime, time, timedelta
+from firebase_utils import initialize_firebase
+
+auth_instance, database_instance = initialize_firebase()
 
 
 def show(database):
@@ -94,3 +97,5 @@ def show(database):
                     st.rerun()
         elif cb == "eventChange":
             st.toast("Schedule updated 👍")
+
+show(database_instance)

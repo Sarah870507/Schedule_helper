@@ -1,5 +1,8 @@
 import streamlit as st
 from ai_template import get_json_response
+from firebase_utils import initialize_firebase
+
+auth_instance, database_instance = initialize_firebase()
 
 system_prompt = """
 You are a smart scheduling assistant called “Schedule_Helper”. Your job is to create a clear, manageable weekly schedule for the user based on the information they provide.
@@ -54,3 +57,4 @@ def show(database):
       user = st.session_state['user']
       database.collection("users").document(user['localId']).set(data)
 
+show(database_instance)
