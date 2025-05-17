@@ -30,6 +30,8 @@ Output rules (very important):
    }
 4. Use the user’s local timezone (America/Los_Angeles) when generating start and end.
 5. Ensure every event’s duration is realistic (30‑ to 120‑minute study blocks work best).
+
+DO NOT USE WHAT TIME YOU THINK IT IS, USE THE DATE FROM THE USER.
 """
 
 def show(database):
