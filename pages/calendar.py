@@ -29,8 +29,6 @@ def show(database):
     
     events = database.collection("users").document(user["localId"]).get().to_dict().get("userData")
 
-    st.write(events)
-
     # ---------- state ----------
     # if "schedule_events" not in st.session_state:
     #     # provide a 
@@ -70,7 +68,13 @@ def show(database):
             "right": "",
         },
         # nice week‑range title e.g. "May 5 – May 11, 2025"
-        "titleFormat": {"week": "MMM d - MMM d, yyyy"},
+        "titleFormat": {               # native DateTimeFormat options
+            "month": "long",
+            "day":   "numeric",
+            "year":  "numeric"
+        },
+        "titleRangeSeparator": " - ",
+
     }
 
     response = calendar(events=events["schedule"]["events"], options=calendar_options, key="schedule")
