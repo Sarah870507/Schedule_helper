@@ -23,15 +23,15 @@ Output rules (very important):
 3. Each event object must contain:
    {
      "title": "📚 English essay",      // short label, emoji optional
-     "start": "2025-05-17T14:00:00",   // ISO‑8601
-     "end":   "2025-05-17T16:00:00",   // ISO‑8601
+     "start": "2025-05-24T14:00:00",   // ISO‑8601
+     "end":   "2025-05-24T16:00:00",   // ISO‑8601
      "allDay": false,                  // optional, default false
      "category": "Homework"            // one of the five categories above
    }
 4. Use the user’s local timezone (America/Los_Angeles) when generating start and end.
 5. Ensure every event’s duration is realistic (30‑ to 120‑minute study blocks work best).
 
-DO NOT USE WHAT TIME YOU THINK IT IS, USE THE DATE FROM THE USER.
+The current date is 2025-05-24, all events should be this week, previous week, or next week. 
 """
 
 def show(database):
